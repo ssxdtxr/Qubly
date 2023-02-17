@@ -1,0 +1,510 @@
+@import "vars"
+*
+	margin: 0
+	padding: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+	&:focus
+		outline: none
+
+*::-webkit-input-placeholder
+	color: #c0c0c0
+	opacity: 1
+	font-family: $default-font
+
+*:-moz-placeholder
+	color: #c0c0c0
+	opacity: 1
+	font-family: $default-font
+
+*::-moz-placeholder
+	color: #c0c0c0
+	opacity: 1
+	font-family: $default-font
+
+*:-ms-input-placeholder
+	color: #c0c0c0
+	opacity: 1
+	font-family: $default-font
+
+*::placeholder, button
+	font-family: $default-font
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #000
+body input:required:valid,
+body textarea:required:valid
+	color: #000
+
+html,body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	line-height: 1.5
+	opacity: 1
+
+img
+	max-width: 100%
+
+.img_responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+/*btns*/
+
+.btn_simple
+	color: $accent
+	border: 1px solid $accent
+	border-radius: 23px 
+	padding: 6px 34px
+	font-weight: 600
+	transition:  all .4s ease
+	text-decoration: none
+	&:hover
+		background-color: $accent
+		color: #fff
+
+.btn
+	color: #fff
+	background-color: $accent
+	border-radius: 24px 
+	padding: 14px 40px
+	transition:  all .4s ease
+	text-decoration: none
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+	&:hover
+		background-color: #fff
+		color: #111
+	&.btn_white
+		background-color: #fff
+		color: #111
+		&:hover
+			color: #fff
+			background-color: $accent
+
+.btn_form
+	display: block
+	border: none
+	outline: none
+	width: 100%
+	padding: 14px
+	color: #fff
+	cursor: pointer
+	background-color: $accent
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+	border-radius: 4px
+	text-decoration: none
+	transition: border-radius .4s ease-in-out
+	&:hover
+		border-radius: 30px
+
+		
+/*btns*/
+#top_banner
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+#header
+	padding-top: 24px
+	.container
+		.inner_header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			>.logo
+				display: block
+				width: 48px
+				height: 48px
+				>img
+					width: 100%
+		.right_side_header
+			display: flex
+			align-items: center
+			gap: 40px
+			.mnu_top
+				display: flex
+				gap: 40px
+				>li
+					display: inline-block
+					position: relative
+					a
+						text-decoration: none
+						font-weight: 500
+						color: #000
+						transition: color .4 ease
+						&:hover
+							color: $accent
+					>.sub_menu
+						position: absolute
+						top: 35px
+						background-color: #fff
+						box-shadow: 0 3px 6px rgba(0, 0, 0, .16)
+						z-index: 10
+						border-radius: 5px
+						padding: 5px 0
+						animation: .6s opac
+						display: none
+						>li
+							display: block
+							>a
+							padding: 3px 10px
+							font-size: 14px
+					&.has_sub_menu
+						&:hover
+							>.sub_menu
+								display: block
+
+@keyframes opac 
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+/*common style heading*/
+
+h1, h2, h3, h4
+	line-height: 1.3
+
+/*common style heading*/				
+						
+
+.notif
+	background-color: $light_accent
+	border-radius: 30px
+	padding: 10px 25px
+	display: flex
+	gap: 12px
+	align-items: center
+	max-width: max-content
+	img
+		width: 16px
+		height: auto
+		gap: 7px
+	p
+		color: $accent
+	a
+		transition: all .4s ease
+		text-decoration: none
+		border-bottom: 1px solid $accent
+		color: $accent
+		&:hover
+			color: darken($accent, 10%)
+			border-color: darken($accent, 10%)
+
+
+.main_banner
+	padding: 240px 0 380px
+	.mb_info
+		>h1
+			color: $dark_accent
+			font-size: 48px
+			font-weight: 700
+			line-height: 48px
+			max-width: 472px
+			margin-top: 10px
+		>.descr
+			color: $gray
+			margin: 14px 0 44px
+			font-size: 18px
+		>.btns
+			display: flex
+			align-items: center
+			gap: 16px
+
+section
+	padding: 100px 0
+	&#top_banner
+		padding: 0
+
+
+#advantages
+	.notif
+		margin: 0 auto
+		img
+			width: 26px
+			height: auto
+			gap: 7px
+		a
+			border-bottom: none
+	.heading_main
+		min-width: 500px
+		margin: 32px auto 48px
+		h2
+			color: $dark_accent
+			font-size: 38px
+			font-weight: 900
+			text-align: center
+			margin-bottom: 12px
+		.description
+			color: $gray
+			font-size: 18px
+			text-align: center
+			margin: 0 auto
+			max-width: 672px
+			// margin-bottom: 48px
+	.row_adv
+		.item_adv
+			text-align: center
+			max-width: 300px
+			>img
+				width: 40px
+				height: 40
+				border-radius: 50%
+			>.heading
+				font-size: 20px
+				font-weight: 700
+				color: $dark_accent
+				margin: 24px 0  16px
+			>.descr
+				color: $gray
+				font-size: 18px
+
+section.information
+	img_responsive
+		margin: 0 auto
+	.right_info
+		>h3
+			color: $dark_accent
+			font-style: 38px
+			font-weight: 900
+			margin: 32px 0 16px
+		>.descr
+			color: $gray
+			font-size: 18px
+
+#reviews
+	background-image: url('img/reviews/img-bg.png')
+	text-align: center
+	padding: 200px 0
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	.item_rev
+		text-align: center
+		display: none
+		animation: opac .6s 
+		&.active
+			display: block
+		>.quotes
+			color: $dark_accent
+			font-size: 22px
+			margin: 0 auto 16px
+			max-width: 660px
+			height: 100px
+		>img
+			width: 80px
+			height: 80px
+			border-radius: 50%
+		>.name
+			margin-top: 16px
+		>.name, >.position
+			color: #111
+			font-weight: 900
+	.line
+		height: 1px
+		width: 100%
+		background-color: #DEC9FA
+		margin: 56px 0
+	.nav_rev
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		>div
+			cursor: pointer
+			width: 16%
+			filter: grayscale(1)
+			transition: all .4s ease
+			display: flex
+			align-items: center
+			justify-content: space-between
+			&:hover, &:active
+				filter: grayscale(0)
+				
+#pre_footer
+	.pf_info
+		>h4
+			color: $dark_accent
+			font-weight: 900
+			font-size: 32px
+			text-align: center
+			
+		>.line_img
+			margin: 42px auto
+			width: 100%
+		>.img_responsive
+			margin: 0 auto
+	.form_wrapper
+		background-color: $light_accent
+		border-radius: 4px
+		max-width: 480px
+		margin: 0 auto
+		>form
+			border-radius: 4px
+			width: 86%
+			border: 1px solid $light_accent
+			transform: translateY(-40px)
+			box-shadow: 0px 10px 20px rgba(137, 137, 162, 0.122)
+			margin: 0 auto
+			background-color: #fff
+			padding: 36px 36px 24px
+			text-align: center
+			>h4
+				color: $dark_accent
+				font-size: 24px
+				margin-bottom: 32px
+				font-weight: 900
+			>input
+				display: block
+				outline: none	
+				width: 100%
+				margin-bottom: 16px
+				padding: 14px 24px
+				border-radius: 4px
+				background-color: #fff
+				border: 1px solid rgba(137, 137, 162,.5) 
+				transition: border-color .4s ease-in-out
+				&::placeholder
+					color: $gray
+					font-size: 16px
+				&:focus
+					border-color: $accent	
+			>.or 
+				margin: 20px auto 15px 
+				font-size: 16px
+				text-transform: uppercase
+			>a
+				display: block
+				min-width: 200px
+				margin: 0 auto
+				text-decoration: none
+			>.footer_form
+				>.line
+					height: 1px
+					width: 100%
+					background-color: rgba(137, 137, 162,.5)
+					margin: 22px 0
+				>p
+					font-size: 14px
+					color: $gray
+					>a
+						color: #1563FF
+					
+#footer
+	background-color: #FBFCFF
+	padding: 60px 0 0
+	.logo_info
+		>a
+			width: 48px
+			height: 48px
+			display: block
+			>img
+				margin: 0 auto
+		>.descr
+			color: $dark_accent
+			font-style: 14px
+			margin: 16px 0
+		>.social
+			list-style-type: none
+			>li  
+				display: inline-block
+				margin-right: 16px
+				>a
+					display: flex
+					align-items: center
+					justify-content: center
+					width: 16px
+					height: 16px
+					transition: transform .4s ease
+					text-decoration: none
+					&:hover
+						transform: translateY(-10px)
+				&:last-child
+					margin-right: 0
+	.mnu_footer_wrapper 
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 0 15px
+		>.mnu_footer
+			width: 23%
+			>ul
+				list-style-type: none
+				>li
+					display: block
+					>a
+						padding: 8px 0
+						display: block
+						text-decoration: none
+						color: $dark-accent
+						transition: color .4 ease
+						font-size: 14px 
+						&:hover
+							color: $accent
+	b.heading
+		color: $dark_accent
+		margin-bottom: 8px
+		display: block
+		font-size: 16px
+		font-weight: 900
+
+	
+	.newsletter
+		>b.heading
+			margin-bottom: 16px
+		>form
+			display: flex
+			align-items: center
+			background-color: #fff
+			box-shadow: 0 5px 9px rgba(0, 0, 0, .05)
+			position: relative
+			>input
+				display: block 
+				border: none
+				outline: none
+				padding: 12px 16px
+				&::placeholder
+					color: $gray
+					font-size: 14x
+			>button
+				position: absolute
+				cursor: pointer
+				top: 6px
+				right: 12px
+				border: none
+				background-color: transparent
+				outline: none
+				display: flex
+				align-items: center
+				justify-content: center	
+				width: 26px
+				height: 26px
+				>img
+					width: 20px
+					height: 20px
+	.copyright 
+		padding-bottom: 15px
+		color: $dark-accent
+		font-weight: 900
+		font-size: 16px
+		margin-top: 66px
+		text-align: center
+			
+
+			
+			
+
